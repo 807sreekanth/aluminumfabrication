@@ -1,0 +1,242 @@
+.contact {
+  padding: 120px 0;
+  background: var(--dark-2);
+  position: relative;
+}
+
+.contact-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.contact-subtitle {
+  max-width: 480px;
+  margin: 16px auto 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* Grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Info */
+.info-heading {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+  margin-bottom: 28px;
+}
+
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: var(--dark-3);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  border-color: var(--gold);
+  background: rgba(201, 168, 76, 0.04);
+}
+
+.info-icon {
+  font-size: 1.4rem;
+  width: 36px;
+  text-align: center;
+}
+
+.info-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.info-value {
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a.info-value:hover { color: var(--gold); }
+
+/* WhatsApp box */
+.whatsapp-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  background: linear-gradient(135deg, #075e54, #128c7e);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.wa-icon {
+  width: 46px;
+  height: 46px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.wa-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.wa-heading {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.wa-num {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.wa-btn {
+  margin-left: auto;
+  padding: 10px 22px !important;
+  font-size: 12px !important;
+  white-space: nowrap;
+}
+
+/* Form */
+.contact-form-wrap {
+  background: var(--dark-3);
+  border: 1px solid var(--border);
+  padding: 48px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--dark-4);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  padding: 14px 18px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  appearance: none;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(154, 154, 138, 0.5);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--gold);
+}
+
+.form-group select {
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.form-group select option {
+  background: var(--dark-4);
+  color: var(--text-primary);
+}
+
+.submit-btn {
+  align-self: flex-start;
+  padding: 16px 40px;
+}
+
+/* Success */
+.form-success {
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.form-success span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.form-success p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+@media (max-width: 768px) {
+  .contact { padding: 80px 0; }
+  .contact-container { padding: 0 20px; }
+  .contact-form-wrap { padding: 28px 20px; }
+  .form-row { grid-template-columns: 1fr; }
+  .whatsapp-box { flex-wrap: wrap; }
+  .wa-btn { width: 100%; text-align: center; justify-content: center; }
+}

@@ -1,0 +1,142 @@
+.testimonials {
+  padding: 120px 0;
+  background: var(--dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(201, 168, 76, 0.04), transparent);
+}
+
+.testimonials-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+}
+
+.test-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+/* Slider */
+.test-slider {
+  position: relative;
+  padding: 60px;
+  background: var(--dark-2);
+  border: 1px solid var(--border);
+}
+
+.test-quote {
+  position: absolute;
+  top: 24px;
+  left: 40px;
+  font-size: 6rem;
+  line-height: 1;
+  color: var(--gold);
+  opacity: 0.2;
+  font-family: Georgia, serif;
+}
+
+.test-content {
+  position: relative;
+  min-height: 200px;
+}
+
+.test-item {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.test-item.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  position: relative;
+}
+
+.test-text {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--text-primary);
+  font-style: italic;
+  margin-bottom: 36px;
+}
+
+.test-author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.test-avatar {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--dark);
+  flex-shrink: 0;
+}
+
+.test-name {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text-primary);
+}
+
+.test-role {
+  font-size: 12px;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+}
+
+.test-stars {
+  margin-left: auto;
+  color: var(--gold);
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.test-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.test-dot {
+  width: 24px;
+  height: 3px;
+  background: rgba(201, 168, 76, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.test-dot.active {
+  background: var(--gold);
+  width: 40px;
+}
+
+@media (max-width: 768px) {
+  .testimonials { padding: 80px 0; }
+  .testimonials-container { padding: 0 20px; }
+  .test-slider { padding: 40px 24px; }
+  .test-text { font-size: 15px; }
+  .test-stars { display: none; }
+}
